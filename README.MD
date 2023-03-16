@@ -1,4 +1,4 @@
-# Restaurant-ChatApp
+# FastFood Restaurant-ChatBOT
 Welcome to my fast food restaurant chatbot. This chatbot will assist customers in placing orders from a list of fastfood items. The main idea is that customers can request orders in number while the chat app aided by the backend would respond to the options.
 
 ---
