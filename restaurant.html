@@ -93,6 +93,40 @@
         color: gray;
         margin-top: 5px;
       }
+      /* Media Queries */
+      /* Mobile devices */
+      @media screen and (max-width: 480px) {
+        #chatContainer {
+          width: 90%;
+          margin: 20px auto;
+          margin-top: 80px;
+        }
+        #chatBox {
+          height: 200px;
+        }
+        /* iPads, Tablets */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+          #chatContainer {
+            width: 90%;
+            margin: 20px auto;
+            margin-top: 80px;
+          }
+          #chatBox {
+            height: 300px;
+          }
+        }
+        /* Laptops, Desktops */
+        @media screen and (min-width: 769px) {
+          #chatContainer {
+            width: 1080px;
+            margin: 30px auto;
+            margin-top: 100px;
+          }
+          #chatBox {
+            height: 400px;
+          }
+        }
+      }
     </style>
   </head>
   <body>
@@ -153,7 +187,7 @@
         socket.emit("user-message", message);
         inputField.value = "";
       }
-      
+
       // Handling receiving messages from the server
       socket.on("bot-message", (message) => {
         appendMessage(message, "bot");
