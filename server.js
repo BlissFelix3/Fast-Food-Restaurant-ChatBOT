@@ -119,7 +119,7 @@ io.on("connection", (socket) => {
               socket.request.session[deviceId].currentOrder.join(", ");
             socket.emit(
               "bot-message",
-              `Your current order is: ${currentOrder}\n1. Place an order\n99. Checkout order\n98. Order history\n97. Current order\n0. Cancel order`
+              `Your current orders: ${currentOrder}\n1. Place an order\n99. Checkout order\n98. Order history\n97. Current order\n0. Cancel order`
             );
           } else {
             socket.emit(
