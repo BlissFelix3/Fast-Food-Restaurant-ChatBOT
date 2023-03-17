@@ -175,7 +175,7 @@ io.on("connection", (socket) => {
         case "0":
           // Cancel the order
           const currentOrder = socket.request.session[deviceId].currentOrder;
-          if (currentOrder.length === 0) {
+          if (currentOrder.length === 0 && orderHistory.length === 0) {
             socket.emit(
               "bot-message",
               `There is nothing to cancel. Type '1' to see the menu.`
